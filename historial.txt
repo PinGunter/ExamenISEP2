@@ -1,0 +1,142 @@
+    1  10/11/21 09:35:22 lsblk
+    2  10/11/21 09:35:22 poweroff
+    3  10/11/21 09:35:22 lsblk
+    4  10/11/21 09:35:22 sudo fdisk /dev/sdb
+    5  10/11/21 09:35:22 lsblk
+    6  10/11/21 09:35:22 sudo pvcreate /dev/sdb1
+    7  10/11/21 09:35:22 sudo vgdisplay
+    8  10/11/21 09:35:22 sudo vgextend cl /dev/sdb1
+    9  10/11/21 09:35:22 sudo vgdisplay
+   10  10/11/21 09:35:22 sudo lvcreate -n new_var -L 3G cl
+   11  10/11/21 09:35:22 lsblk
+   12  10/11/21 09:35:22 mkdir /new_var
+   13  10/11/21 09:35:22 clear
+   14  10/11/21 09:35:22 sudo mkdir /new_var
+   15  10/11/21 09:35:22 sudo mkfs -t ext4 /dev/mapper/cl-new_var 
+   16  10/11/21 09:35:22 sudo mount /dev/mapper/cl-new_var /new_var/
+   17  10/11/21 09:35:22 sudo systemctl isolate rescue
+   18  10/11/21 09:35:22 clear
+   19  10/11/21 09:35:22 lsblk
+   20  10/11/21 09:35:22 sudo ls / -lZ
+   21  10/11/21 09:35:22 ls /var
+   22  10/11/21 09:35:22 ls /var_old/
+   23  10/11/21 09:35:22 poweroff
+   24  10/11/21 09:35:22 lsblk
+   25  10/11/21 09:35:22 poweroff
+   26  10/11/21 09:35:22 clear
+   27  10/11/21 09:35:22 poweroff
+   28  10/11/21 09:48:47 export PS1="[securityP2 \u@\h:\w] \D{%F} \t $"
+   29  10/11/21 09:48:55 export PS1="[securityP2 \u@\h:\w] \D{%F} \t $ "
+   30  10/11/21 09:49:26 export HISTTIMEFORMAT="%d/%m/%y %T "
+   31  10/11/21 09:49:38 ifconfig
+   32  10/11/21 09:49:52 cd /etc/sysconfig/network-scripts/
+   33  10/11/21 09:49:57 cp ifcfg-enp0s3 ifcfg-enp0s8
+   34  10/11/21 09:50:02 sudo cp ifcfg-enp0s3 ifcfg-enp0s8
+   35  10/11/21 09:50:11 ls
+   36  10/11/21 09:50:20 sudo vi ifcfg-enp0s8
+   37  10/11/21 09:51:36 sudo ifup enp0s8
+   38  10/11/21 09:51:40 clear
+   39  10/11/21 09:51:42 ifconfig
+   40  10/11/21 09:54:06 ping 192.168.56.105
+   41  10/11/21 09:54:38 cd
+   42  10/11/21 09:54:47 sudo vi /etc/ssh/sshd_config 
+   43  10/11/21 09:56:49 sudo yum provides semanage
+   44  10/11/21 09:57:03 sudo ifup enp0s3
+   45  10/11/21 09:57:05 clear
+   46  10/11/21 09:57:07 sudo yum provides semanage
+   47  10/11/21 09:57:30 sudo yum install policycoreutils-python-utils
+   48  10/11/21 09:57:43 sudo vi /etc/ssh/sshd_config 
+   49  10/11/21 09:58:00 sudo semanage port -a -t ssh_port_t -p tcp 22022
+   50  10/11/21 09:58:37 sudo sytemctl restart sshd
+   51  10/11/21 09:58:42 sudo systemctl restart sshd
+   52  10/11/21 09:58:48 sudo systemctl status sshd
+   53  10/11/21 09:59:14 clear
+   54  10/11/21 09:59:17 sudo useradd 
+   55  10/11/21 09:59:21 sudo adduser 
+   56  10/11/21 09:59:42 man useradd
+   57  10/11/21 09:59:58 clear
+   58  10/11/21 10:00:26 sudo firewall-cmd --enable --port=22022/tcp
+   59  10/11/21 10:00:35 sudo firewall-cmd --enable-port=22022/tcp
+   60  10/11/21 10:00:41 man firewall-cmd
+   61  10/11/21 10:01:39 sudo firewall-cmd --add-port=22022/tcp --permanent
+   62  10/11/21 10:01:42 sudo firewall-cmd --add-port=22022/tcp
+   63  10/11/21 10:01:50 sudo firewall-cmd --reload
+   64  10/11/21 10:01:52 clear
+   65  10/11/21 10:02:48 man useradd
+   66  10/11/21 10:03:42 sudo useradd -m -p practicas,ise Fernando
+   67  10/11/21 10:03:55 su Fernando
+   68  10/11/21 10:04:20 sudo userdel Fernando 
+   69  10/11/21 10:04:24 sudo useradd Fernando
+   70  10/11/21 10:04:33 su Fernando
+   71  10/11/21 10:04:40 sudo passwd Fernando
+   72  10/11/21 10:04:50 su Fernando
+   73  10/11/21 10:04:55 clear
+   74  10/11/21 10:04:55 ls
+   75  10/11/21 10:05:01 ls /home
+   76  10/11/21 10:05:10 clear
+   77  10/11/21 10:05:21 sudo vi /etc/ssh/sshd_config 
+   78  10/11/21 10:09:19 man sshd
+   79  10/11/21 10:09:51 man sshd_config 
+   80  10/11/21 10:10:19 clear
+   81  10/11/21 10:10:25 sudo vi /etc/ssh/sshd_config 
+   82  10/11/21 10:10:46 clear
+   83  10/11/21 10:10:52 sudo systemctl restart sshd
+   84  10/11/21 10:10:57 sudo systemctl status sshd
+   85  10/11/21 10:14:02 sudo vi /etc/ssh/sshd_config 
+   86  10/11/21 10:14:50 clear
+   87  10/11/21 10:15:02 sudo yum install httpd
+   88  10/11/21 10:15:15 man httpd
+   89  10/11/21 10:15:44 cat /etc/httpd/conf/httpd.conf 
+   90  10/11/21 10:15:52 cat /etc/httpd/conf/httpd.conf  | grep port
+   91  10/11/21 10:16:44 getsebool
+   92  10/11/21 10:16:53 getsebool -a | grep httpd
+   93  10/11/21 10:16:59 getsebool -a | grep httpd | less
+   94  10/11/21 10:17:12 semanage port -a | grep httpd
+   95  10/11/21 10:17:15 semanage port -a | grep http
+   96  10/11/21 10:17:19 semanage port -a 
+   97  10/11/21 10:17:28 semanage port -a --list
+   98  10/11/21 10:17:34 semanage port -a --list -p http
+   99  10/11/21 10:18:33 vi /etc/ssh/sshd_config 
+  100  10/11/21 10:18:48 sudo vi /etc/ssh/sshd_config
+  101  10/11/21 10:19:09 semanage port --list
+  102  10/11/21 10:19:12 sudo semanage port --list
+  103  10/11/21 10:19:17 sudo semanage port --list | grep http
+  104  10/11/21 10:19:56 clear
+  105  10/11/21 10:20:05 vi /etc/httpd/conf/httpd.conf 
+  106  10/11/21 10:21:31 ls
+  107  10/11/21 10:21:43 mkdir SalvadorRomeroCortes
+  108  10/11/21 10:21:49 cd SalvadorRomeroCortes/
+  109  10/11/21 10:21:50 git init
+  110  10/11/21 10:21:57 sudo dnf install git
+  111  10/11/21 10:22:19 git init
+  112  10/11/21 10:22:38 history > historial.txt
+  113  10/11/21 10:22:41 git add historial.txt 
+  114  10/11/21 10:22:52 git commit -m "Fichero con historial"
+  115  10/11/21 10:23:20 git log
+  116  10/11/21 10:23:57 cd
+  117  10/11/21 10:23:59 clear
+  118  10/11/21 10:24:18 man rsync
+  119  10/11/21 10:47:54 cd SalvadorRomeroCortes/
+  120  10/11/21 10:47:55 git log
+  121  10/11/21 10:48:03 git status
+  122  10/11/21 10:48:09 cd 
+  123  10/11/21 10:48:10 mkdir a
+  124  10/11/21 10:48:11 cd a
+  125  10/11/21 10:48:12 git init
+  126  10/11/21 10:48:18 touch b
+  127  10/11/21 10:48:20 git add b
+  128  10/11/21 10:48:24 git commit -m "mensaje"
+  129  10/11/21 10:48:29 git log
+  130  10/11/21 10:48:49 cd ..
+  131  10/11/21 10:48:53 rm -rf a/
+  132  10/11/21 10:48:55 clear
+  133  10/11/21 10:48:59 cd SalvadorRomeroCortes/
+  134  10/11/21 10:49:00 git log
+  135  10/11/21 10:50:03 clear
+  136  10/11/21 10:50:05 cd ..
+  137  10/11/21 10:50:08 rm -rf SalvadorRomeroCortes/
+  138  10/11/21 10:50:11 mkdir SalvadorRomeroCorte
+  139  10/11/21 10:50:17 mv SalvadorRomeroCorte/ SalvadorRomeroCortes
+  140  10/11/21 10:50:19 cd SalvadorRomeroCortes/
+  141  10/11/21 10:50:20 git init
+  142  10/11/21 10:50:28 history > historial.txt
